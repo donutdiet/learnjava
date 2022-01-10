@@ -5,6 +5,7 @@ import java.util.Scanner;
 /*
    The formula for Mortgage Payment is as follows:
    M = P [{r(1+r)^n}/{(1+r)^n – 1}]
+
    Where
    M = Monthly payment
    P = principal
