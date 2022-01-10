@@ -8,8 +8,8 @@ import java.util.Scanner;
    Where
    M = Monthly payment
    P = principal
-   r = rate
-   n = number of payments
+   r = rate (annual interest rate)
+   n = number of monthly payment
 
    Error Checking not implemented
  */
