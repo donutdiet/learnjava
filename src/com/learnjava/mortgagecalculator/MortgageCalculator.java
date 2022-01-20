@@ -23,7 +23,7 @@ public class MortgageCalculator {
         double principle = reader.nextDouble();
 
         System.out.print("Annual Interest Rate as decimal: ");
-        double rate = reader.nextDouble();
+            double rate = reader.nextDouble();
         double monthlyRate = rate/12;
 
         System.out.print("Period (Years): ");
