@@ -14,4 +14,8 @@ Reverse String: reverse every word in a paragraph
 =================================================
 
 Leetcode questions:
-1) Two sum:  Leetcode two sum question
+
+ -0001: Two sum
+ -0020: Valid Parentheses
+ -0169: Majority Element
+ -0283: Move Zeroes
