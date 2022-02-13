@@ -27,6 +27,21 @@ public class MoveZeroes {
         return null;
     }
 
+    public int[] moveZeroesInplace2(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            if ( nums[i] == 0) {
+                for (int j = i + 1; j < nums.length; j++) {
+                    if (nums[j] != 0) {
+                        nums[i] = nums[j];
+                        nums[j] = 0;
+                        break;
+                    }
+                }
+            }
+        }
+        return nums;
+    }
+
     // implementation 2
     // making a copy of the array is allowed
     public int[] moveZeroes(int[] nums) {
@@ -58,5 +73,8 @@ public class MoveZeroes {
 
         int[] result4 = mz.moveZeroesInPlace(new int[] {0});
         System.out.println(Arrays.toString(result4));
+
+        int[] result5 = mz.moveZeroesInplace2(new int[] {0,1,0,3,12});
+        System.out.println(Arrays.toString(result5));
     }
 }
