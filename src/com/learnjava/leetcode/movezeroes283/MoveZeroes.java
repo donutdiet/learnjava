@@ -5,7 +5,8 @@ import java.util.Arrays;
 /**
  * Leetcode 283
  *
- * Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+ * Given an integer array nums, move all 0's to the end of it while maintaining
+ * the relative order of the non-zero elements.
  *
  * Note that you must do this in-place without making a copy of the array.
  *
@@ -20,16 +21,39 @@ import java.util.Arrays;
  * Output: [0]
  */
 public class MoveZeroes {
+    public int[] moveZeroes2(int[] nums) {
+        int firstZero = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                nums[firstZero] = nums[i];
+                if (firstZero != i) {
+                    nums[i] = 0;
+                }
+                firstZero++;
+            }
+        }
+        return nums;
+    }
 
     // implementation 1
     // You must do the moving in place without making a copy of the array
     public int[] moveZeroesInPlace(int[] nums) {
-        return null;
+        int firstZero = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                nums[firstZero] = nums[i];
+                firstZero++;
+            }
+        }
+        for (int j = firstZero; j < nums.length; j++) {
+            nums[j] = 0;
+        }
+        return nums;
     }
 
     public int[] moveZeroesInplace2(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
-            if ( nums[i] == 0) {
+            if (nums[i] == 0) {
                 for (int j = i + 1; j < nums.length; j++) {
                     if (nums[j] != 0) {
                         nums[i] = nums[j];
@@ -62,19 +86,28 @@ public class MoveZeroes {
 
     public static void main(String[] args) {
         MoveZeroes mz = new MoveZeroes();
-        int[] result1 = mz.moveZeroes(new int[] {0,1,0,3,12});
+        int[] result1 = mz.moveZeroes(new int[] { 0, 1, 0, 3, 12 });
         System.out.println(Arrays.toString(result1));
 
-        int[] result2 = mz.moveZeroes(new int[] {0});
+        int[] result2 = mz.moveZeroes(new int[] { 0 });
         System.out.println(Arrays.toString(result2));
 
-        int[] result3 = mz.moveZeroesInPlace(new int[] {0,1,0,3,12});
+        int[] result3 = mz.moveZeroesInPlace(new int[] { 0, 1, 0, 3, 12 });
         System.out.println(Arrays.toString(result3));
 
-        int[] result4 = mz.moveZeroesInPlace(new int[] {0});
+        int[] result4 = mz.moveZeroesInPlace(new int[] { 0 });
         System.out.println(Arrays.toString(result4));
 
-        int[] result5 = mz.moveZeroesInplace2(new int[] {0,1,0,3,12});
+        int[] result5 = mz.moveZeroesInplace2(new int[] { 0, 1, 0, 3, 12 });
         System.out.println(Arrays.toString(result5));
+
+        int[] result6 = mz.moveZeroes2(new int[] { 0, 1, 0, 3, 12 });
+        System.out.println(Arrays.toString(result6));
+
+        int[] result7 = mz.moveZeroes2(new int[] { 0 });
+        System.out.println(Arrays.toString(result7));
+
+        int[] result8 = mz.moveZeroes2(new int[] { 0, 1, 0, 3, 12 });
+        System.out.println(Arrays.toString(result8));
     }
 }
