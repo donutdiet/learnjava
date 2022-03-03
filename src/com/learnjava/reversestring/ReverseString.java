@@ -1,7 +1,5 @@
 package com.learnjava.reversestring;
 
-import javax.sound.sampled.SourceDataLine;
-
 /**
  * This program reverses every word of a string and display the reversed string
  * as an output. For example,

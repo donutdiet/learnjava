@@ -1,0 +1,11 @@
+{
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "test-lib\\**\\*.jar"
+        ],
+        "exclude": [
+            "c:\\Users\\jerry\\Documents\\vscode\\javalib\\junit-jupiter-api-5.8.2.jar"
+        ]
+    }
+}
