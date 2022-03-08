@@ -1,12 +1,12 @@
 package com.learnjava.linkedlist;
 
-public class  LinkedList{
+public class LinkedList {
 
     public Node head;
 
     public int get(int index) {
         Node node = head;
-        for(int i=0; i<index; i++) {
+        for (int i = 0; i < index; i++) {
             node = node.next;
         }
         return node.data;
@@ -39,10 +39,15 @@ public class  LinkedList{
         if (index == 0) {
             head = node.next;
         }
-        for (int i = 0; i < index; i++) {
+
+        for (int i = 0; i < index - 1; i++) {
             node = node.next;
         }
-        node.next = node.next.next;
+        if (node.next.next != null) {
+            node.next = node.next.next;
+        } else {
+            node.next = null;
+        }
     }
 
     public void show() {
@@ -55,23 +60,9 @@ public class  LinkedList{
         System.out.println(node.data);
     }
 
-    public static void changeNode(Node node) {
-        node.data = 100;
-    }
-
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-//        list.remove(0);
-//        list.show();
-
-        Node node = list.head.next.next;
-        changeNode(node);
-        Node aNode = list.head.next.next;
-        System.out.println(aNode.data);
-
+        list.remove(0);
 
     }
 }
