@@ -3,13 +3,27 @@ package com.learnjava.linkedlist;
 public class LinkedList {
 
     public Node head;
+    private int size = 0;
+
+    private String outOfBoundsMsg(int index) {
+        return "Index: " + index + ", Size: " + size;
+    }
 
     public int get(int index) {
+
+        rangeCheck(index);
+
         Node node = head;
         for (int i = 0; i < index; i++) {
             node = node.next;
         }
         return node.data;
+    }
+
+    private void rangeCheck(int index) {
+        if (index >= size || index < 0) {
+            throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
+        }
     }
 
     // If you can not figure it out, please refer to video
@@ -31,9 +45,13 @@ public class LinkedList {
             }
             n.next = node;
         }
+        size++;
     }
 
     public void remove(int index) {
+
+        rangeCheck(index);
+
         // remove the element at index
         Node node = head;
         if (index == 0) {
@@ -48,6 +66,15 @@ public class LinkedList {
         } else {
             node.next = null;
         }
+        size--;
+    }
+
+    public boolean isEmpty() {
+        return this.size > 0 ?  false : true;
+    }
+
+    public int size() {
+        return this.size;
     }
 
     public void show() {

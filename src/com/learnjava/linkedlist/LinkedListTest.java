@@ -1,6 +1,7 @@
 package com.learnjava.linkedlist;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LinkedListTest {
@@ -13,12 +14,10 @@ public class LinkedListTest {
     }
 
     @Test
-    public void removeNodeFromEmptyLinkedListShouldReturnNullPointerException() {
+    public void removeNodeFromEmptyLinkedListShouldThrowIndexOutOfBoundsException() {
         LinkedList list = new LinkedList();
-        assertThrows(NullPointerException.class,
-                () -> {
-                    list.remove(0);
-                });
+        assertThrows(IndexOutOfBoundsException.class,
+                () -> list.remove(0));
     }
 
     @Test
@@ -37,5 +36,18 @@ public class LinkedListTest {
         list.add(2);
         list.remove(1);
         assertEquals(1, list.get(0));
+    }
+
+    @Test
+    public void indexGreaterThanSizeShouldThrowIndexOutOfBoundsException() {
+        LinkedList list = new LinkedList();
+        assertThrows(IndexOutOfBoundsException.class,
+                () -> list.get(1));
+    }
+
+    @Test
+    public void testEmptyLinkedList() {
+        LinkedList list = new LinkedList();
+        assertTrue(list.isEmpty());
     }
 }
