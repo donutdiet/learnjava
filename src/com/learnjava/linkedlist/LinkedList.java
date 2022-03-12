@@ -48,6 +48,24 @@ public class LinkedList {
         size++;
     }
 
+    public void addAll(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            Node node = new Node();
+            node.data = nums[i];
+
+            if (head == null) {
+                head = node;
+            } else {
+                Node n = head;
+                while (n.next != null) {
+                    n = n.next;
+                }
+                n.next = node;
+            }
+            size++;
+        }
+    }
+
     public void remove(int index) {
 
         rangeCheck(index);
@@ -69,8 +87,38 @@ public class LinkedList {
         size--;
     }
 
+    public int indexOf(int num) {
+        Node node = head;
+        int index = 0;
+        while (node != null) {
+            if (node.data == num) {
+                return index;
+            }
+            node = node.next;
+            index++;
+        }
+        return -1;
+    }
+
+    public int lastIndexOf(int num) {
+        Node node = head;
+        int currentIndex = 0;
+        int lastIndex = -1;
+        while (node != null) {
+            if (node.data == num) {
+                lastIndex = currentIndex;
+            }
+            node = node.next;
+            currentIndex++;
+        }
+        if (lastIndex != -1) {
+            return lastIndex;
+        }
+        return -1;
+    }
+
     public boolean isEmpty() {
-        return this.size > 0 ?  false : true;
+        return this.size > 0 ? false : true;
     }
 
     public int size() {
@@ -89,7 +137,8 @@ public class LinkedList {
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-        list.remove(0);
-
+        int[] nums = { 1, 2, 3, 4 };
+        list.addAll(nums);
+        list.show();
     }
 }
