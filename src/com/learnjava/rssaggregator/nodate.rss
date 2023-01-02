@@ -1,0 +1,50 @@
+<rss
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:osu="http://www.osu.edu/rss.php?feed=Events" version="2.0">
+    <channel>
+        <atom:link href="http://www.osu.edu/rss.php?feed=Features&amp;limit=4" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub" type="application/rss+xml"/>
+        <title>Ohio State University Features</title>
+        <link>http://www.osu.edu/features/</link>
+        <language>en-us</language>
+        <description>Features appearing on The Ohio State University homepage (www.osu.edu)</description>
+        <lastBuildDate>Wed, 05 Oct 2022 12:02:24 -0400</lastBuildDate>
+        <image>
+            <title>Ohio State University Features</title>
+            <link>http://www.osu.edu/features/</link>
+            <url>http://www.osu.edu/images/osu_logo.png</url>
+        </image>
+        <item>
+            <title/>
+            <link>http://www.osu.edu/osumobile</link>
+            <guid>http://www.osu.edu/osumobile</guid>
+            <description>
+                <![CDATA[ <p><img src="http://www.osu.edu/images/rotate/2012/android/thumb.jpg"></p><p>OSU Mobile</p> ]]>
+            </description>
+        </item>
+        <item>
+            <title/>
+            <link>http://www.osu.edu/osumobile/</link>
+            <guid>http://www.osu.edu/osumobile/</guid>
+            <description>
+                <![CDATA[ <p><img src="http://www.osu.edu/images/rotate/2011/android/thumb.jpg"></p><p>Now on Android!</p> ]]>
+            </description>
+        </item>
+        <item>
+            <title/>
+            <link>http://osu.edu/O-H-I-O/</link>
+            <guid>http://osu.edu/O-H-I-O/</guid>
+            <description>
+                <![CDATA[ <p><img src="http://www.osu.edu/images/rotate/2013/ohio9000/thumb.jpg"></p><p></p> ]]>
+            </description>
+        </item>
+        <item>
+            <title/>
+            <link>http://www.osu.edu/features/2012/beabuckeye</link>
+            <guid>http://www.osu.edu/features/2012/beabuckeye</guid>
+            <description>
+                <![CDATA[ <p><img src="http://www.osu.edu/images/rotate/2012/beabuckeye/thumb.jpg"></p><p></p> ]]>
+            </description>
+        </item>
+    </channel>
+</rss>

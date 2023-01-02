@@ -1,0 +1,6 @@
+<feeds title="Top Stories">
+<feed url="data/tc-2/nodate.rss" name="No Date" file="nodate.html"/>
+<feed url="data/tc-2/notitle.rss" name="No Title" file="notitle.html"/>
+<feed url="data/tc-2/nothing.rss" name="Nothing" file="nothing.html"/>
+
+</feeds>

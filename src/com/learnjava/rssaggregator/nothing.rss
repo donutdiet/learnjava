@@ -1,0 +1,38 @@
+<rss
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:osu="http://www.osu.edu/rss.php?feed=Events" version="2.0">
+    <channel>
+        <atom:link href="http://www.osu.edu/rss.php?feed=Features&amp;limit=4" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub" type="application/rss+xml"/>
+        <title></title>
+        <link>http://www.osu.edu/features/</link>
+        <language>en-us</language>
+        <description></description>
+        <lastBuildDate>Wed, 05 Oct 2022 12:02:24 -0400</lastBuildDate>
+        <image>
+            <title></title>
+            <link>http://www.osu.edu/features/</link>
+            <url>http://www.osu.edu/images/osu_logo.png</url>
+        </image>
+        <item>
+            <title/>
+            <guid>http://www.osu.edu/osumobile</guid>
+            <description></description>
+        </item>
+        <item>
+            <title/>
+            <guid>http://www.osu.edu/osumobile/</guid>
+            <description></description>
+        </item>
+        <item>
+            <title/>
+            <guid>http://osu.edu/O-H-I-O/</guid>
+            <description></description>
+        </item>
+        <item>
+            <title/>
+            <guid>http://www.osu.edu/features/2012/beabuckeye</guid>
+            <description></description>
+        </item>
+    </channel>
+</rss>
